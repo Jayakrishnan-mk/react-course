@@ -18,16 +18,18 @@
        const tees = 8*2;
        const productCost = socks + tees;
        const shippingCost = 5;
-       console.log(productCost);
+
        const div = (
         <div>
           <p>Product cost: ${productCost}</p>
-
+          <p>Shipping cost: ${shippingCost}</p>
+          <p>Total cost: ${shippingCost + productCost}</p>
+          <button>Place your order</button>
         </div>
       )
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(para);
+      ReactDOM.createRoot(container).render(div);
     </script>
 
   </body>
