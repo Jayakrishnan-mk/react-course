@@ -18,10 +18,16 @@
     <script type="text/babel">
       console.log(dayjs().format('MMMM D'))
   
-      const para = <p>Current time: {dayjs().format('HH:mm:ss')}</p>
-
+      // const para = <p>Current time: {dayjs().format('HH:mm:ss')}</p>
+      
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(para);
+      const root = ReactDOM.createRoot(container);
+      // root.render(para);
+      
+      setInterval(() => {
+        const para = <p>Current time: {dayjs().format('HH:mm:ss')}</p>
+        root.render(para);
+      }, 1000);
     </script>
 
   </body>
