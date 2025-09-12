@@ -17,9 +17,11 @@
     
     <script type="text/babel">
       console.log(dayjs().format('MMMM D'))
+      const currentDate = dayjs().format('MMMM D');
+      const para = <p>Today is {currentDate}</p>
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render('Practice');
+      ReactDOM.createRoot(container).render(para);
     </script>
 
   </body>
